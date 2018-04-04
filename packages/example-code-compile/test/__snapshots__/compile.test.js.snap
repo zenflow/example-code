@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`compile basic 1`] = `
+"<pre>  <code class=\\"executable js\\" data-compiled-code=\\"&quot;use strict&quot;;
+
+var foo = 1,
+    bar = 2;\\">let [foo, bar] = [1, 2]</code>
+</pre>"
+`;

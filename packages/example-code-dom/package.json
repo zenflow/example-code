@@ -1,0 +1,45 @@
+{
+  "name": "example-code-dom",
+  "description": "Enhance a &lt;code> element with an \"execute\" button and more",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zenflow/example-code.git"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "main": "dist/example-code-dom.cjs.js",
+  "module": "dist/example-code-dom.es.js",
+  "browser": "dist/example-code-dom.umd.js",
+  "author": {
+    "name": "Matthew Francis Brunetti",
+    "email": "zenflow87@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zenflow/example-code/issues"
+  },
+  "homepage": "https://github.com/zenflow/example-code/tree/master/packages/example-code-dom#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "jest": "^22.4.3",
+    "zenflow-build-js-lib": "^3.0.1"
+  },
+  "scripts": {
+    "start": "jest --verbose --updateSnapshot --watch --notify",
+    "test": "echo \"TODO: `jest --verbose --ci`\"",
+    "build": "zenflow-build-js-lib --prod",
+    "prepublish": "npm run build"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ],
+    "coverageDirectory": "coverage"
+  }
+}

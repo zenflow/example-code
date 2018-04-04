@@ -1,0 +1,41 @@
+{
+  "name": "example-code-compile",
+  "description": "Enhance a &lt;code> element with an \"execute\" button and more",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zenflow/example-code.git"
+  },
+  "files": [
+    "lib"
+  ],
+  "main": "lib/compile.js",
+  "author": {
+    "name": "Matthew Francis Brunetti",
+    "email": "zenflow87@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zenflow/example-code/issues"
+  },
+  "homepage": "https://github.com/zenflow/example-code/tree/master/packages/example-code-compile#readme",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "parse5": "^4.0.0"
+  },
+  "devDependencies": {
+    "jest": "^22.4.3"
+  },
+  "scripts": {
+    "start": "jest --verbose --updateSnapshot --watch --notify",
+    "test": "jest --verbose --ci"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "lib/**/*.js"
+    ],
+    "coverageDirectory": "coverage"
+  }
+}
