@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`enhanceElement #01 snapshot 1`] = `
+<code
+  class="executable js"
+>
+  window.callback()
+</code>
+`;
+
+exports[`enhanceElement #01 snapshot 2`] = `
+<code
+  class="executable js"
+>
+  <button
+    style="float: right;"
+  >
+    ▶
+  </button>
+  window.callback()
+</code>
+`;
