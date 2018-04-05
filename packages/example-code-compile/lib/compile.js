@@ -13,16 +13,13 @@ function compile({ html, babel = defaultBabelConfig }) {
       const classAttr = element.attrs.find(({ name }) => name === 'class')
       const classes = classAttr ? classAttr.value.split(' ') : []
       if (classes.includes('executable') && classes.includes('js')) {
-        let code = getTextContent(element)
-        if (babel) {
-          code = transform(code, {
-            babelrc: false,
-            ...babel,
-          }).code
-        }
+        const compiled = transform(getTextContent(element), {
+          babelrc: false,
+          ...babel,
+        })
         element.attrs.push({
           name: 'data-compiled-code',
-          value: code,
+          value: compiled.code,
         })
       }
     }
