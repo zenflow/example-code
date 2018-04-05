@@ -1,5 +1,7 @@
-import { enhance } from './enhance'
+import { enhanceElement } from './enhanceElement'
 
 export function enhanceAll() {
-  enhance(document.querySelectorAll('code'))
+  for (const element of document.querySelectorAll('code')) {
+    enhanceElement(element)
+  }
 }
