@@ -22,24 +22,15 @@
     "url": "https://github.com/zenflow/example-code/issues"
   },
   "homepage": "https://github.com/zenflow/example-code/tree/master/packages/example-code-dom#readme",
+  "dependencies": {},
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-env": "^1.6.1",
-    "jest": "^22.4.3",
     "zenflow-build-js-lib": "^3.0.1"
   },
   "scripts": {
-    "start": "jest --verbose --updateSnapshot --watch --notify",
-    "test": "echo \"TODO: `jest --verbose --ci`\"",
     "build": "zenflow-build-js-lib --prod",
     "prepublish": "npm run build"
-  },
-  "jest": {
-    "collectCoverage": true,
-    "collectCoverageFrom": [
-      "src/**/*.js"
-    ],
-    "coverageDirectory": "coverage"
   }
 }

@@ -2,7 +2,9 @@ const { parseFragment, serialize } = require('parse5')
 const { transform } = require('babel-core')
 const { walk, getTextContent } = require('./util')
 
-const defaultBabelConfig = { presets: [['babel-preset-env']] }
+const defaultBabelConfig = {
+  presets: [[require.resolve('babel-preset-env')]],
+}
 
 function compile({ html, babel = defaultBabelConfig }) {
   const fragment = parseFragment(html)

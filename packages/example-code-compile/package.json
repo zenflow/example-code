@@ -24,18 +24,5 @@
     "babel-preset-env": "^1.6.1",
     "parse5": "^4.0.0"
   },
-  "devDependencies": {
-    "jest": "^22.4.3"
-  },
-  "scripts": {
-    "start": "jest --verbose --updateSnapshot --watch --notify",
-    "test": "jest --verbose --ci"
-  },
-  "jest": {
-    "collectCoverage": true,
-    "collectCoverageFrom": [
-      "lib/**/*.js"
-    ],
-    "coverageDirectory": "coverage"
-  }
+  "devDependencies": {}
 }
