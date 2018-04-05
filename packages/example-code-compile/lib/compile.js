@@ -10,9 +10,8 @@ function compile({ html, babel = defaultBabelConfig }) {
   const fragment = parseFragment(html)
   walk(fragment, element => {
     if (element.tagName === 'code') {
-      const classes = element.attrs
-        .find(({ name }) => name === 'class')
-        .value.split(' ')
+      const classAttr = element.attrs.find(({ name }) => name === 'class')
+      const classes = classAttr ? classAttr.value.split(' ') : []
       if (classes.includes('executable') && classes.includes('js')) {
         let code = getTextContent(element)
         if (babel) {
