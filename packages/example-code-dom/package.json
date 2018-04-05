@@ -1,7 +1,7 @@
 {
   "name": "example-code-dom",
   "description": "Enhance a &lt;code> element with an \"execute\" button and more",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zenflow/example-code.git"
@@ -22,7 +22,6 @@
     "url": "https://github.com/zenflow/example-code/issues"
   },
   "homepage": "https://github.com/zenflow/example-code/tree/master/packages/example-code-dom#readme",
-  "dependencies": {},
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
