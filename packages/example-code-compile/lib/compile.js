@@ -12,16 +12,16 @@ function compile({ html, babel = defaultBabelConfig }) {
         .find(({ name }) => name === 'class')
         .value.split(' ')
       if (classes.includes('executable') && classes.includes('js')) {
-        let value = getTextContent(element)
+        let code = getTextContent(element)
         if (babel) {
-          value = transform(value, {
+          code = transform(code, {
             babelrc: false,
             ...babel,
           }).code
         }
         element.attrs.push({
           name: 'data-compiled-code',
-          value,
+          value: code,
         })
       }
     }
