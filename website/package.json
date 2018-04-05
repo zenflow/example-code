@@ -1,13 +1,17 @@
 {
   "scripts": {
-    "start": "docusaurus-start",
-    "build": "docusaurus-build",
-    "publish": "docusaurus-publish",
+    "_copy-vendor": "cpy ../packages/example-code-dom/dist/example-code-dom.umd.js ./static/vendor",
+    "_compile-examples": "node ../packages/example-code/cli.js build/example-code/docs/doc1.html",
+    "start": "npm run _copy-vendor && docusaurus-start",
+    "build": "npm run _copy-vendor && docusaurus-build && npm run _compile-examples",
+    "publish": "npm run build && gh-pages -d ./build/example-code",
     "write-translations": "docusaurus-write-translations",
     "version": "docusaurus-version",
     "rename-version": "docusaurus-rename-version"
   },
   "devDependencies": {
-    "docusaurus": "^1.0.9"
+    "cpy-cli": "^1.0.1",
+    "docusaurus": "^1.0.9",
+    "gh-pages": "^1.1.0"
   }
 }

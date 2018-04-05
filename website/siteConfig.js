@@ -1,17 +1,20 @@
+const basePath = '/example-code/'
+
 const users = [
   {
     caption: 'User1',
-    image: '/example-code/img/docusaurus.svg',
+    image: `${basePath}img/docusaurus.svg`,
     infoLink: 'https://www.facebook.com',
     pinned: true,
   },
 ]
 
 const siteConfig = {
-  title: 'Test Site' /* title for your website */,
-  tagline: 'A website for testing',
-  url: 'https://facebook.github.io' /* your website url */,
-  baseUrl: '/example-code/' /* base url for your project */,
+  title: 'example-code',
+  tagline: 'Enhance `<code>` elements with an "execute" button and more',
+  url: `https://zenflow.github.io${basePath}`,
+  organizationName: 'zenflow',
+  baseUrl: basePath,
   projectName: 'example-code',
   headerLinks: [
     { doc: 'doc1', label: 'Docs' },
@@ -20,11 +23,9 @@ const siteConfig = {
     { blog: true, label: 'Blog' },
   ],
   users,
-  /* path to images for header/footer */
   headerIcon: 'img/docusaurus.svg',
   footerIcon: 'img/docusaurus.svg',
   favicon: 'img/favicon.png',
-  /* colors for website */
   colors: {
     primaryColor: '#2E8555',
     secondaryColor: '#205C3B',
@@ -41,11 +42,12 @@ const siteConfig = {
     ]
   }, */
   copyright: '❤',
-  highlight: {
-    // Highlight.js theme to use for syntax highlighting in code blocks
-    theme: 'default',
-  },
-  scripts: ['https://buttons.github.io/buttons.js'],
+  highlight: { theme: 'default' }, // Highlight.js theme to use for syntax highlighting in code blocks
+  scripts: [
+    'https://buttons.github.io/buttons.js',
+    `${basePath}vendor/example-code-dom.umd.js`,
+    `${basePath}js/boot.js`,
+  ],
   repoUrl: 'https://github.com/zenflow/example-code',
 }
 
