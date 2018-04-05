@@ -1,0 +1,28 @@
+{
+  "name": "example-code",
+  "description": "Enhance a &lt;code> element with an \"execute\" button and more",
+  "version": "1.0.2",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zenflow/example-code.git"
+  },
+  "files": [
+    "lib",
+    "cli.js"
+  ],
+  "bin": "bin/example-code.js",
+  "author": {
+    "name": "Matthew Francis Brunetti",
+    "email": "zenflow87@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zenflow/example-code/issues"
+  },
+  "homepage": "https://github.com/zenflow/example-code/tree/master/packages/example-code#readme",
+  "dependencies": {
+    "example-code-compile": "^1.0.2",
+    "example-code-dom": "^1.0.2",
+    "minimist": "^1.2.0"
+  }
+}
