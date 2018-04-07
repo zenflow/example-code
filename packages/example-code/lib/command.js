@@ -7,7 +7,7 @@ const writeFile = promisify(fs.writeFile)
 
 module.exports = async ({ log, cwd, args }) => {
   const { _: [input], output = input } = args
-  console.log({ input, output })
+  log('example-code: ', { input, output })
   const source = await readFile(input, 'utf8')
   const compiled = exampleCodeCompile({ html: source })
   if (compiled !== source) {

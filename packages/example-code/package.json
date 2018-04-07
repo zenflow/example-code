@@ -22,7 +22,6 @@
   "homepage": "https://github.com/zenflow/example-code/tree/master/packages/example-code#readme",
   "dependencies": {
     "example-code-compile": "^1.0.2",
-    "example-code-dom": "^1.0.2",
     "minimist": "^1.2.0"
   }
 }
