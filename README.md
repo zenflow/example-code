@@ -8,7 +8,7 @@ Enhance a &lt;code> element with an "execute" button and more
 
 ---
 
-Markdown blocks marked "executable" like this...
+Markdown blocks marked "executable" like this get "execute" buttons in the top-right corner...
 
 ```
 ```js executable
@@ -17,16 +17,7 @@ alert(`${foo} ${bar}`)
 ``` `
 ```
 
-get "execute" buttons like this...
-
-```js executable
-const [foo, bar] = [5, 8]
-alert(`${foo} ${bar}`)
-```
-
 Code is compiled with babel for execution in browser.
-
----
 
 For an example check out [the github pages website](https://zenflow.github.io/example-code/docs/intro.html).
 
