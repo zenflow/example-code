@@ -1,14 +1,6 @@
-const basePath = '/example-code/'
 const remarkablePluginExampleCode = require('../packages/remarkable-plugin-example-code')
 
-const users = [
-  {
-    caption: 'User1',
-    image: `${basePath}img/docusaurus.svg`,
-    infoLink: 'https://www.facebook.com',
-    pinned: true,
-  },
-]
+const basePath = '/example-code/'
 
 const siteConfig = {
   title: 'example-code',
@@ -18,36 +10,18 @@ const siteConfig = {
   baseUrl: basePath,
   projectName: 'example-code',
   headerLinks: [
-    { doc: 'doc1', label: 'Docs' },
-    { doc: 'doc4', label: 'API' },
-    { page: 'help', label: 'Help' },
-    { blog: true, label: 'Blog' },
+    { page: 'index', label: 'Home' },
+    { doc: 'intro', label: 'Docs' },
   ],
-  users,
-  headerIcon: 'img/docusaurus.svg',
-  footerIcon: 'img/docusaurus.svg',
-  favicon: 'img/favicon.png',
   colors: {
-    primaryColor: '#2E8555',
-    secondaryColor: '#205C3B',
+    primaryColor: '#8E3B46',
+    secondaryColor: '#E1DD8F',
   },
-  /* custom fonts for website */
-  /* fonts: {
-    myFont: [
-      "Times New Roman",
-      "Serif"
-    ],
-    myOtherFont: [
-      "-apple-system",
-      "system-ui"
-    ]
-  }, */
-  copyright: '❤',
   highlight: { theme: 'default' }, // Highlight.js theme to use for syntax highlighting in code blocks
   scripts: [
     'https://buttons.github.io/buttons.js',
     `${basePath}vendor/example-code-dom.umd.js`,
-    `${basePath}js/boot.js`,
+    `${basePath}boot.js`,
   ],
   repoUrl: 'https://github.com/zenflow/example-code',
   markdownPlugins: [remarkablePluginExampleCode],
