@@ -1,7 +1,7 @@
 {
   "name": "remarkable-plugin-example-code",
   "description": "Enhance a &lt;code> element with an \"execute\" button and more",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zenflow/example-code.git"
