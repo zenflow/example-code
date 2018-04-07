@@ -1,6 +1,7 @@
 const remarkablePluginExampleCode = require('../packages/remarkable-plugin-example-code')
 
 const basePath = '/example-code/'
+const repoUrl = 'https://github.com/zenflow/example-code'
 
 const siteConfig = {
   title: 'example-code',
@@ -12,6 +13,7 @@ const siteConfig = {
   headerLinks: [
     { page: 'index', label: 'Home' },
     { doc: 'intro', label: 'Docs' },
+    { href: repoUrl, label: 'GitHub' },
   ],
   colors: {
     primaryColor: '#8E3B46',
@@ -23,7 +25,7 @@ const siteConfig = {
     `${basePath}vendor/example-code-dom.umd.js`,
     `${basePath}boot.js`,
   ],
-  repoUrl: 'https://github.com/zenflow/example-code',
+  repoUrl,
   markdownPlugins: [remarkablePluginExampleCode],
 }
 
