@@ -1,5 +1,5 @@
 {
-  "name": "example-code",
+  "name": "example-code-cli",
   "description": "Enhance a &lt;code> element with an \"execute\" button and more",
   "version": "1.1.0",
   "repository": {
@@ -10,7 +10,7 @@
     "lib",
     "cli.js"
   ],
-  "bin": "bin/example-code.js",
+  "bin": "cli.js",
   "author": {
     "name": "Matthew Francis Brunetti",
     "email": "zenflow87@gmail.com"
@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/zenflow/example-code/issues"
   },
-  "homepage": "https://github.com/zenflow/example-code/tree/master/packages/example-code#readme",
+  "homepage": "https://github.com/zenflow/example-code/tree/master/packages/example-code-cli#readme",
   "dependencies": {
     "example-code-compile": "^1.0.2",
     "minimist": "^1.2.0"

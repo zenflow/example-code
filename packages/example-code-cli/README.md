@@ -1,4 +1,4 @@
-# example-code-compile
+# example-code-cli
 
 Enhance a &lt;code> element with an "execute" button and more
 
