@@ -1,10 +1,9 @@
 {
   "scripts": {
     "_copy-vendor": "cpy ../packages/example-code-dom/dist/example-code-dom.umd.js ./static/vendor",
-    "_compile-examples": "node ../packages/example-code/cli.js build/example-code/docs/doc1.html",
     "start": "npm run _copy-vendor && docusaurus-start",
-    "build": "npm run _copy-vendor && docusaurus-build && npm run _compile-examples",
-    "publish": "npm run build && gh-pages -d ./build/example-code",
+    "build": "npm run _copy-vendor && docusaurus-build",
+    "publish": "npm run build && docusaurus-publish",
     "write-translations": "docusaurus-write-translations",
     "version": "docusaurus-version",
     "rename-version": "docusaurus-rename-version"

@@ -1,4 +1,5 @@
 const basePath = '/example-code/'
+const remarkablePluginExampleCode = require('../packages/remarkable-plugin-example-code')
 
 const users = [
   {
@@ -49,6 +50,7 @@ const siteConfig = {
     `${basePath}js/boot.js`,
   ],
   repoUrl: 'https://github.com/zenflow/example-code',
+  markdownPlugins: [remarkablePluginExampleCode],
 }
 
 module.exports = siteConfig
