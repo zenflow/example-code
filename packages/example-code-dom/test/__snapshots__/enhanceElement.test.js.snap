@@ -13,6 +13,7 @@ exports[`enhanceElement #01 snapshot 2`] = `
   class="executable js"
 >
   <button
+    class="execute"
     style="float: right;"
   >
     ▶

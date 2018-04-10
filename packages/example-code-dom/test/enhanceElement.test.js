@@ -22,7 +22,7 @@ describe('enhanceElement', () => {
     expect(() => enhanceElement(document.createElement('div'))).toThrowError()
   })
 
-  it('#02 clicking button executes code', async () => {
+  it('#03 clicking button executes code', async () => {
     const codeElement = getCodeElement()
     enhanceElement(codeElement)
 
@@ -34,5 +34,12 @@ describe('enhanceElement', () => {
     codeElement.querySelector('button').click()
 
     expect(callbackCalled).toEqual(true)
+  })
+
+  it('#04 takes a executeButtonClass option', async () => {
+    const codeElement = getCodeElement()
+    enhanceElement(codeElement, { executeButtonClass: 'my-execute' })
+    const button = codeElement.querySelector('button')
+    expect(String(button.classList)).toEqual('my-execute')
   })
 })
