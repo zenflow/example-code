@@ -1,14 +1,18 @@
+require('./build')
 const remarkablePluginExampleCode = require('../packages/remarkable-plugin-example-code')
 
-const basePath = '/example-code/'
+const url = 'https://zenflow.github.io'
+const baseUrl = '/example-code/'
 const repoUrl = 'https://github.com/zenflow/example-code'
 
 const siteConfig = {
+  url,
+  baseUrl,
+  repoUrl,
   title: 'example-code',
-  tagline: 'Enhance `<code>` elements with an "execute" button and more',
-  url: `https://zenflow.github.io${basePath}`,
+  tagline:
+    'Fast and sweet button set for code blocks in your documentation site',
   organizationName: 'zenflow',
-  baseUrl: basePath,
   projectName: 'example-code',
   headerLinks: [
     { page: 'index', label: 'Home' },
@@ -17,16 +21,11 @@ const siteConfig = {
   ],
   colors: {
     primaryColor: '#8E3B46',
-    secondaryColor: '#E1DD8F',
+    secondaryColor: '#F6F2A3',
   },
   highlight: { theme: 'default' }, // Highlight.js theme to use for syntax highlighting in code blocks
-  scripts: [
-    'https://buttons.github.io/buttons.js',
-    `${basePath}vendor/example-code-dom.umd.js`,
-    `${basePath}boot.js`,
-  ],
-  repoUrl,
   markdownPlugins: [remarkablePluginExampleCode],
+  onPageNav: 'separate',
 }
 
 module.exports = siteConfig

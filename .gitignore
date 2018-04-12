@@ -4,3 +4,4 @@ dist/
 coverage/
 website/build/
 website/static/vendor/
+website/i18n/

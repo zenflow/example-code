@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 
 const React = require('react')
+// const { MarkdownBlock } = require('../../core/CompLibrary.js')
 const siteConfig = require(process.cwd() + '/siteConfig.js')
 
 class Button extends React.Component {
@@ -22,7 +23,9 @@ Button.defaultProps = {
 const SplashContainer = props => (
   <div className="homeContainer">
     <div className="homeSplashFade">
-      <div className="wrapper homeWrapper">{props.children}</div>
+      <div className="wrapper homeWrapper">
+        <div className="inner">{props.children}</div>
+      </div>
     </div>
   </div>
 )
@@ -42,29 +45,14 @@ const PromoSection = props => (
   </div>
 )
 
-class HomeSplash extends React.Component {
-  render() {
-    return (
-      <SplashContainer>
-        <div className="inner">
-          <ProjectTitle />
-          <PromoSection>
-            <Button href="./docs/intro.html">Try It Out</Button>
-          </PromoSection>
-        </div>
-      </SplashContainer>
-    )
-  }
-}
-
-class Index extends React.Component {
-  render() {
-    return (
-      <div>
-        <HomeSplash />
-      </div>
-    )
-  }
-}
+const Index = props => (
+  <SplashContainer>
+    <PromoSection>
+      <ProjectTitle />
+      {/* <MarkdownBlock>{siteConfig.readme}</MarkdownBlock> */}
+    </PromoSection>
+    <Button href="./docs/intro.html">Try It Out</Button>
+  </SplashContainer>
+)
 
 module.exports = Index

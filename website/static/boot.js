@@ -1,3 +1,3 @@
-document.addEventListener('DOMContentLoaded', function() {
-  window.exampleCodeDom.enhanceAll()
+window.exampleCodeDom.enhanceAll({
+  executeButtonClass: 'execute button',
 })
