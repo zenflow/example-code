@@ -1,22 +1,24 @@
 require('./build')
+const { readFileSync } = require('fs')
 const remarkablePluginExampleCode = require('../packages/remarkable-plugin-example-code')
 
 const url = 'https://zenflow.github.io'
 const baseUrl = '/example-code/'
 const repoUrl = 'https://github.com/zenflow/example-code'
+const readme = readFileSync('../README.md', 'utf8')
 
 const siteConfig = {
   url,
   baseUrl,
   repoUrl,
+  readme,
   title: 'example-code',
-  tagline:
-    'Fast and sweet button set for code blocks in your documentation site',
+  tagline: 'Impressive enhancements for code blocks in your documentation site',
   organizationName: 'zenflow',
   projectName: 'example-code',
   headerLinks: [
     { page: 'index', label: 'Home' },
-    { doc: 'intro', label: 'Docs' },
+    { doc: 'index', label: 'Docs' },
     { href: repoUrl, label: 'GitHub' },
   ],
   colors: {

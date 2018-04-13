@@ -1,5 +1,11 @@
 {
   "docs": {
-    "Docs": ["intro"]
+    "General": ["index"],
+    "Packages": [
+      "example-code-dom",
+      "example-code-compile",
+      "remarkable-plugin-example-code",
+      "example-code-cli"
+    ]
   }
 }

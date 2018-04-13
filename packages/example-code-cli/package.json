@@ -1,6 +1,6 @@
 {
   "name": "example-code-cli",
-  "description": "Enhance a &lt;code> element with an \"execute\" button and more",
+  "description": "Command Line Interface for `example-code-compile`",
   "version": "1.1.1",
   "repository": {
     "type": "git",
@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/zenflow/example-code/issues"
   },
-  "homepage": "https://github.com/zenflow/example-code/tree/master/packages/example-code-cli#readme",
+  "homepage": "https://zenflow.github.io/example-code/docs/example-code-cli.html",
   "dependencies": {
     "example-code-compile": "^1.0.2",
     "minimist": "^1.2.0"

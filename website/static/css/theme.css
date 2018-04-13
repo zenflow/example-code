@@ -1,0 +1,27 @@
+a {
+  color: #EA9;
+}
+
+nav.toc {
+  width: 260px;
+}
+
+.mainContainer .wrapper .post h3 {
+  font-size: 130%;
+}
+
+.fixedHeaderContainer header h2 {
+  font: bold 48px Helvetica, Arial, Sans-Serif;
+  text-shadow: 1px 1px #f88, 2px 2px #f88, 3px 3px #f88;
+}
+
+.navigationSlider .slidingNav ul li a {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.homeContainer h1 {
+  line-height: 100%;
+  font: bold 48px Helvetica, Arial, Sans-Serif;
+  text-shadow: 1px 1px #f88, 2px 2px #f88, 3px 3px #f88;
+}

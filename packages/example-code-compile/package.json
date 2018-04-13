@@ -1,6 +1,6 @@
 {
   "name": "example-code-compile",
-  "description": "Enhance a &lt;code> element with an \"execute\" button and more",
+  "description": "Preprocess your example code for execution in browsers, works with `example-code-dom`",
   "version": "1.0.2",
   "repository": {
     "type": "git",
@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/zenflow/example-code/issues"
   },
-  "homepage": "https://github.com/zenflow/example-code/tree/master/packages/example-code-compile#readme",
+  "homepage": "https://zenflow.github.io/example-code/docs/example-code-compile.html",
   "dependencies": {
     "babel-core": "^6.26.0",
     "babel-preset-env": "^1.6.1",

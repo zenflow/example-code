@@ -6,6 +6,7 @@ const { baseUrl } = siteConfig
 
 const scripts = [
   'https://unpkg.com/babel-polyfill@6/browser.js',
+  'https://unpkg.com/whatwg-fetch@2',
   'https://buttons.github.io/buttons.js',
   `${baseUrl}vendor/example-code-dom.umd.js`,
   `${baseUrl}boot.js`,
