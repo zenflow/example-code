@@ -1,7 +1,7 @@
 /** @preserve
   * package: example-code-dom v1.3.0
   * file: dist/example-code-dom.umd.js
-  * homepage: https://github.com/zenflow/example-code/tree/master/packages/example-code-dom#readme
+  * homepage: https://zenflow.github.io/example-code/docs/example-code-dom.html
   * license: MIT
   **/
 

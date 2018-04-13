@@ -1897,3 +1897,7 @@ footer .copyright {
 a {
   color: #EA9;
 }
+
+nav.toc {
+  width: 260px;
+}
