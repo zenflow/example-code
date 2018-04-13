@@ -982,7 +982,7 @@ pre code {
   margin-top: 50px;
   width: 100%;
   padding: 0;
-  background: #E1DD8F;
+  background: #F6F2A3;
   color: #fff;
 }
 .navigationSlider .slidingNav.slidingNavActive ul {
@@ -1886,4 +1886,14 @@ footer .copyright {
   .entry-share {
     display: none;
   }
+}
+
+.homeContainer h1 {
+  font-size: 300%;
+  font-weight: normal;
+  line-height: 100%;
+}
+
+a {
+  color: #EA9;
 }

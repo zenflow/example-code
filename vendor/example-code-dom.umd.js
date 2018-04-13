@@ -1,5 +1,5 @@
 /** @preserve
-  * package: example-code-dom v1.0.2
+  * package: example-code-dom v1.3.0
   * file: dist/example-code-dom.umd.js
   * homepage: https://github.com/zenflow/example-code/tree/master/packages/example-code-dom#readme
   * license: MIT
@@ -12,25 +12,36 @@
 }(this, (function (exports) { 'use strict';
 
   function enhanceElement(element) {
+    var _ref = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {},
+        _ref$executeButtonCla = _ref.executeButtonClass,
+        executeButtonClass = _ref$executeButtonCla === undefined ? 'execute' : _ref$executeButtonCla;
+
     if (String(element.tagName).toUpperCase() !== 'CODE') {
       throw new TypeError('element must be a <code> element');
     }
-    element.classList.contains('executable') && element.classList.contains('js') && executableJs(element);
+    element.classList.contains('executable') && element.classList.contains('js') && executableJs(element, executeButtonClass);
   }
 
-  function executableJs(element) {
+  function executableJs(element, executeButtonClass) {
     var code = element.dataset.compiledCode || element.innerHTML;
 
-    element.prepend(Object.assign(document.createElement('button'), {
+    var buttonElement = Object.assign(document.createElement('button'), {
       innerHTML: '▶',
-      style: 'float: right',
+      className: executeButtonClass,
       onclick: function onclick() {
         eval(code); // eslint-disable-line no-eval
       }
-    }));
+    });
+    buttonElement.style.float = 'right';
+
+    prepend(buttonElement, element);
   }
 
-  function enhanceAll() {
+  function prepend(element, parent) {
+    return parent.insertBefore(element, parent.firstChild);
+  }
+
+  function enhanceAll(options) {
     var _iteratorNormalCompletion = true;
     var _didIteratorError = false;
     var _iteratorError = undefined;
@@ -39,7 +50,7 @@
       for (var _iterator = document.querySelectorAll('code')[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
         var element = _step.value;
 
-        enhanceElement(element);
+        enhanceElement(element, options);
       }
     } catch (err) {
       _didIteratorError = true;
