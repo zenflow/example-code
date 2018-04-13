@@ -1909,3 +1909,7 @@ a {
 nav.toc {
   width: 260px;
 }
+
+.mainContainer .wrapper .post h3 {
+  font-size: 130%;
+}
