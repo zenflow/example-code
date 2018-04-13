@@ -7,7 +7,11 @@ title: remarkable-plugin-example-code
 
 ## Usage
 
-Use just like any other remarkable plugin. Options are passed directly to [example-code-compile](./example-code-compile.html).
+Apply just like any other remarkable plugin. Options are passed directly to [example-code-compile](./example-code-compile.html).
+
+To mark code blocks in your markdown with keywords like `executable`, include them in the opening line like this: ` ```js executable`
+
+## Example
 
 ```js
 const remarkablePluginExampleCode = require('remarkable-plugin-example-code')
