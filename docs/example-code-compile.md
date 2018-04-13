@@ -9,11 +9,6 @@ title: example-code-compile
 
 This function will search through your HTML, compile the content of `<code class="executable js">` elements, and attach the results as a `data-compiled-code` attribute for later execution in the browser. The element's inner content is not changed.
 
-## Options
-
-- `html`: **required** The input html markup to find and transpile `<code>` elements in
-- `babel`: Custom babel configuration for Babel version 6 (default is just to use `babel-preset-env`)
-
 ## Example
 
 ```js
@@ -25,10 +20,7 @@ const source = `\
   const [foo, bar] = ['foo', 'bar']
 </code>`
 
-const compiled = exampleCodeCompile({
-  html: source,
-  babel: { presets: ['babel-preset-env'] } // the default
-})
+const compiled = exampleCodeCompile(source, { /* ...options */ })
 
 console.log(compiled)
 ```
@@ -44,3 +36,7 @@ var foo = 'foo',
   const [foo, bar] = ['foo', 'bar']
 </code>
 ```
+
+## Options
+
+- `babel`: Custom babel configuration for Babel version 6 (default is `{ presets: ['babel-preset-env'] }`)

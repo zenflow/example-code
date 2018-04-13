@@ -6,7 +6,7 @@ const defaultBabelConfig = {
   presets: [[require.resolve('babel-preset-env')]],
 }
 
-function compile({ html, babel = defaultBabelConfig }) {
+function compile(html, { babel = defaultBabelConfig } = {}) {
   const fragment = parseFragment(html)
   walk(fragment, element => {
     if (element.tagName === 'code') {

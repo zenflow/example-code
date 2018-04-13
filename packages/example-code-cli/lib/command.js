@@ -26,7 +26,7 @@ Options:
   }
   log('example-code: ', { input, output })
   const source = await readFile(input, 'utf8')
-  const compiled = exampleCodeCompile({ html: source })
+  const compiled = exampleCodeCompile(source)
   if (compiled !== source) {
     await writeFile(output, compiled)
   }
