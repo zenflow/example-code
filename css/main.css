@@ -1888,20 +1888,6 @@ footer .copyright {
   }
 }
 
-.homeContainer h1 {
-  line-height: 100%;
-  font: bold 52px Helvetica, Arial, Sans-Serif;
-  text-shadow: 1px 1px #f88, 2px 2px #f88, 3px 3px #f88;
-  -webkit-transition: all 0.12s ease-out;
-  -moz-transition: all 0.12s ease-out;
-  -o-transition: all 0.12s ease-out;
-}
-
-.homeContainer h1:hover {
-  position: relative; top: -3px; left: -3px;
-  text-shadow: 1px 1px #f88, 2px 2px #f88, 3px 3px #f88, 4px 4px #f88, 5px 5px #f88, 6px 6px #f88;
-}
-
 a {
   color: #EA9;
 }
@@ -1912,4 +1898,20 @@ nav.toc {
 
 .mainContainer .wrapper .post h3 {
   font-size: 130%;
+}
+
+.fixedHeaderContainer header h2 {
+  font: bold 48px Helvetica, Arial, Sans-Serif;
+  text-shadow: 1px 1px #f88, 2px 2px #f88, 3px 3px #f88;
+}
+
+.navigationSlider .slidingNav ul li a {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.homeContainer h1 {
+  line-height: 100%;
+  font: bold 48px Helvetica, Arial, Sans-Serif;
+  text-shadow: 1px 1px #f88, 2px 2px #f88, 3px 3px #f88;
 }

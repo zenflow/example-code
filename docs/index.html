@@ -9,41 +9,21 @@
 <p>Example:</p>
 <pre><code class="hljs css js executable" data-compiled-code="'use strict';
 
-function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step(&quot;next&quot;, value); }, function (err) { step(&quot;throw&quot;, err); }); } } return step(&quot;next&quot;); }); }; }
+fetch('https://api.ipify.org?format=json').then(function (r) {
+  return r.text();
+}).then(function (text) {
+  var _JSON$parse = JSON.parse(text),
+      ip = _JSON$parse.ip;
 
-_asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
-  var url, text, _JSON$parse, ip;
-
-  return regeneratorRuntime.wrap(function _callee$(_context) {
-    while (1) {
-      switch (_context.prev = _context.next) {
-        case 0:
-          url = 'https://api.ipify.org?format=json';
-          _context.next = 3;
-          return fetch(url).then(function (r) {
-            return r.text();
-          });
-
-        case 3:
-          text = _context.sent;
-          _JSON$parse = JSON.parse(text), ip = _JSON$parse.ip;
-
-          alert('Your IP: ' + ip);
-
-        case 6:
-        case 'end':
-          return _context.stop();
-      }
-    }
-  }, _callee, undefined);
-}))();">(<span class="hljs-keyword">async</span> () =&gt; {
-<span class="hljs-keyword">const</span> url = <span class="hljs-string">'https://api.ipify.org?format=json'</span>
-<span class="hljs-keyword">const</span> text = <span class="hljs-keyword">await</span> fetch(url).then(<span class="hljs-function"><span class="hljs-params">r</span> =&gt;</span> r.text())
-<span class="hljs-keyword">const</span> { ip } = <span class="hljs-built_in">JSON</span>.parse(text)
-alert(<span class="hljs-string">`Your IP: <span class="hljs-subst">${ip}</span>`</span>)
-})()
+  alert('Your IP: ' + ip);
+});">fetch(<span class="hljs-string">'https://api.ipify.org?format=json'</span>)
+  .then(<span class="hljs-function"><span class="hljs-params">r</span> =&gt;</span> r.text())
+  .then(<span class="hljs-function"><span class="hljs-params">text</span> =&gt;</span> {
+    <span class="hljs-keyword">const</span> { ip } = <span class="hljs-built_in">JSON</span>.parse(text)
+    alert(<span class="hljs-string">`Your IP: <span class="hljs-subst">${ip}</span>`</span>)
+  })
 </code></pre>
-<p>The above code should execute in all environments. Go ahead, try it in IE9.</p>
+<p>The above code should execute in all environments, despite the es-next syntax. Go ahead, try it in IE9.</p>
 <h2><a class="anchor" aria-hidden="true" id="packages"></a><a href="#packages" aria-hidden="true" class="hash-link"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Packages</h2>
 <p>There are two main packages in this monorepo project:</p>
 <ul>
