@@ -13,14 +13,18 @@ export function enhanceElement(
 function executableJs(element, executeButtonClass) {
   const code = element.dataset.compiledCode || element.innerHTML
 
-  element.prepend(
-    Object.assign(document.createElement('button'), {
-      innerHTML: '▶',
-      classList: executeButtonClass,
-      style: 'float: right',
-      onclick() {
-        eval(code) // eslint-disable-line no-eval
-      },
-    }),
-  )
+  const buttonElement = Object.assign(document.createElement('button'), {
+    innerHTML: '▶',
+    className: executeButtonClass,
+    onclick() {
+      eval(code) // eslint-disable-line no-eval
+    },
+  })
+  buttonElement.style.float = 'right'
+
+  prepend(buttonElement, element)
+}
+
+function prepend(element, parent) {
+  return parent.insertBefore(element, parent.firstChild)
 }
