@@ -6,7 +6,11 @@ const readFile = promisify(fs.readFile)
 const writeFile = promisify(fs.writeFile)
 
 module.exports = async ({ log, cwd, args }) => {
-  const { _: [input], output = input, help } = args
+  const {
+    _: [input],
+    output = input,
+    help,
+  } = args
   if (help) {
     log(`\
 Usage: npx example-code-cli <input> [options]
