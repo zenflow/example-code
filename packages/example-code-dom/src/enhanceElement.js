@@ -1,3 +1,5 @@
+const globalEval = eval // eslint-disable-line no-eval
+
 export function enhanceElement(
   element,
   { executeButtonClass = 'execute' } = {},
@@ -17,7 +19,7 @@ function executableJs(element, executeButtonClass) {
     innerHTML: '▶',
     className: executeButtonClass,
     onclick() {
-      eval(code) // eslint-disable-line no-eval
+      globalEval(code)
     },
   })
   buttonElement.style.float = 'right'
