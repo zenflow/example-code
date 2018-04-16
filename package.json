@@ -14,6 +14,7 @@
     "fix": "zenflow-lint-js --fix",
     "lint": "zenflow-lint-js",
     "test-only": "jest --verbose --ci",
+    "update-snapshot": "jest --verbose --updateSnapshot",
     "test": "npm run lint && npm run test-only",
     "release": "npm test && lerna publish --yes"
   },

@@ -12,9 +12,17 @@ describe('enhanceAll', () => {
 </div>`
     enhanceAll()
     const codeElements = document.querySelectorAll('code')
-    expect(codeElements[0].querySelector('button')).toBeTruthy()
-    expect(codeElements[1].querySelector('button')).toBeFalsy()
-    expect(codeElements[2].querySelector('button')).toBeFalsy()
-    expect(codeElements[3].querySelector('button')).toBeTruthy()
+    expect(
+      codeElements[0].previousElementSibling.querySelector('button'),
+    ).toBeTruthy()
+    expect(
+      codeElements[1].previousElementSibling.querySelector('button'),
+    ).toBeFalsy()
+    expect(
+      codeElements[2].previousElementSibling.querySelector('button'),
+    ).toBeFalsy()
+    expect(
+      codeElements[3].previousElementSibling.querySelector('button'),
+    ).toBeTruthy()
   })
 })

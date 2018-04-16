@@ -1,23 +1,39 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`enhanceElement #01 snapshot 1`] = `
-<code
-  class="executable js"
->
-  window.callback()
-</code>
+<body>
+  <code
+    class="executable js"
+  >
+    window.callback()
+  </code>
+</body>
 `;
 
 exports[`enhanceElement #01 snapshot 2`] = `
-<code
-  class="executable js"
->
-  <button
-    class="execute"
-    style="float: right;"
+<body>
+  <div
+    class="example-code-buttons"
   >
-    ▶
-  </button>
-  window.callback()
-</code>
+    <button
+      class="execute"
+    >
+      <span
+        class="icon"
+      >
+        ▶
+      </span>
+      <span
+        class="label"
+      >
+         execute
+      </span>
+    </button>
+  </div>
+  <code
+    class="executable js example-code"
+  >
+    window.callback()
+  </code>
+</body>
 `;
