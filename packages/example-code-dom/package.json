@@ -24,12 +24,18 @@
   "homepage": "https://zenflow.github.io/example-code/docs/example-code-dom.html",
   "devDependencies": {
     "babel-core": "^6.26.0",
-    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.1",
-    "zenflow-build-js-lib": "^3.0.1"
+    "cross-env": "^5.1.4",
+    "del-cli": "^1.1.0",
+    "rollup": "^0.57.1",
+    "rollup-plugin-babel": "^3.0.3",
+    "rollup-plugin-uglify": "^3.0.0"
   },
   "scripts": {
-    "build": "zenflow-build-js-lib --prod",
+    "build": "del-cli dist && cross-env NODE_ENV=production rollup --config rollup.config.js",
+    "build:watch": "del-cli dist && rollup --config rollup.config.js --watch",
     "prepublish": "npm run build"
   }
 }
